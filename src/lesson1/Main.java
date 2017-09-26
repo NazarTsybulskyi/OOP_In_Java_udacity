@@ -1,6 +1,8 @@
+package lesson1;
+
 public class Main {
     public static void main (String[] args) {
-        ContactsManager cm = new ContactsManager();
+        ContactManager cm = new ContactManager();
 
         Contact c1 = new Contact();
         c1.name = "John";

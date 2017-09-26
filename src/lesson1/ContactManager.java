@@ -1,10 +1,14 @@
-class ContactsManager {
+package lesson1;
+
+import lesson1.Contact;
+
+public class ContactManager {
     // Fields:
-    Contact [] myFriends;
+    Contact[] myFriends;
     int friendsCount;
 
     // Constructor:
-    ContactsManager(){
+    ContactManager(){
         friendsCount = 0;
         myFriends = new Contact[500];
     }
