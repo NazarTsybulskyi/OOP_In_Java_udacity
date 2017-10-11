@@ -8,10 +8,9 @@ public class MovieService {
     String movieName;
 
     public static String getUndersoredMovieName(String movieName) {
-        String nameWithoutSpaces = movieName.replaceAll("\\s","");
         String underscName = "";
-        for (int i = 0; i < nameWithoutSpaces.length()-1; i++) {
-            if (isLetter(nameWithoutSpaces.charAt(i)))
+        for (int i = 0; i < movieName.length()-1; i++) {
+            if (isLetter(movieName.charAt(i)))
                 underscName += "_ ";
         }
         return  underscName;
