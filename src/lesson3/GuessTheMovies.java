@@ -1,10 +1,6 @@
 package lesson3;
-import java.util.Arrays;
 import java.util.Scanner;
 import java.io.File;
-import java.math.*;
-
-import static java.lang.Math.*;
 
 public class GuessTheMovies {
     public static void main (String[] args) throws Exception{
@@ -20,11 +16,14 @@ public class GuessTheMovies {
         boolean hasWon = false;
         int pointCounter = 0;
         Scanner scanner = new Scanner(System.in);
-        while (!hasWon) {
+        while (!hasWon || pointCounter < 10) {
             System.out.println(movieName_hidden);
             System.out.println("Name one letter. You have " + pointCounter + " points");
             char guess = scanner.next().charAt(0);
-
+            if (MovieService.getCharIndices(guess, movTitles[movNumber]).length > 0) {
+                System.out.println("There is letter " + guess + " in this movie title!");
+                System.out.println();
+            }
         }
 
     }
