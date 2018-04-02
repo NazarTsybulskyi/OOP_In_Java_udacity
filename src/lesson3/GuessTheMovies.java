@@ -4,6 +4,9 @@ import java.io.File;
 
 public class GuessTheMovies {
     public static void main (String[] args) throws Exception{
-
+        File file = new File("movies.txt");
+        Scanner sc = new Scanner(file);
+        Integer index = (int) Math.ceil(Math.random() * 200);
+        System.out.println("You're gessing " + MovieService.getRandomMovieTitle(file, index));
     }
 }
